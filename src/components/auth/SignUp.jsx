@@ -73,7 +73,7 @@ export default function SignUp() {
 							placeholder='Username'
 							value={username}
 							onChange={e => setUsername(e.target.value)}
-							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-green-300'
+							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200'
 							required
 						/>
 					</div>
@@ -87,7 +87,7 @@ export default function SignUp() {
 							placeholder='E-mail'
 							value={email}
 							onChange={e => setEmail(e.target.value)}
-							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-green-300'
+							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200'
 							required
 						/>
 					</div>
@@ -101,7 +101,7 @@ export default function SignUp() {
 							placeholder='Parol'
 							value={password}
 							onChange={e => setPassword(e.target.value)}
-							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-green-300'
+							className='w-full rounded-lg border border-gray-300 bg-gray-50 p-4 pl-10 text-sm focus:outline-none focus:ring-2 focus:ring-blue-200'
 							required
 						/>
 					</div>
@@ -109,7 +109,7 @@ export default function SignUp() {
 					<button
 						type='submit'
 						disabled={isLoading}
-						className='w-full rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-4 text-sm font-medium text-white hover:from-green-600 hover:to-emerald-700 disabled:opacity-70'
+						className='w-full rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 px-5 py-4 text-sm font-medium text-white hover:from-blue-600 hover:to-indigo-700 disabled:opacity-70'
 					>
 						{isLoading ? 'Yuborilmoqda...' : 'Ro‘yxatdan o‘tish'}
 					</button>
