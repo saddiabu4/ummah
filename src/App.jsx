@@ -1,23 +1,29 @@
-import { Routes, Route } from 'react-router-dom'
-// register
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
-// admin dashboard
-import AdminDashboard from './components/admin/Dashboard'
-// countries Detail
-import CountryDetail from './components/admin/countries/CountryDetail'
-// countries
-import Uzbekistan from './components/admin/countries/uzbekistan/Uzbekistan'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignupForm from "./components/pages/auth/SignUp";
+import SigninForm from './components/pages/auth/SignIn'; 
+import Home from "./components/Home";
+
+// admin panel
+import Admin from "./components/layouts/Admin";
+// user panel
+import User from "./components/layouts/User";
+
 function App() {
-	return (
-		<Routes>
-			<Route path='/' element={<SignIn />} />
-			<Route path='/SignUp' element={<SignUp />} />
-			<Route path='/admin/dashboard' element={<AdminDashboard />} />
-			<Route path='/uzbekistan' element={<Uzbekistan />} />
-			<Route path='/admin/dashboard/countries/:id' element={<CountryDetail />} />
-		</Routes>
-	)
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-100">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignupForm />} />
+          <Route path="/signin" element={<SigninForm />} />
+          {/* <Admin /> */}
+          <Route path="/admin" element={<Admin />} />
+          {/* <User /> */}
+          <Route path="/user" element={<User />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
