@@ -5,7 +5,6 @@ import LoginRegisterButtons from './ui/LoginRegisterButton';
 const Home = () => {
   return (
     <div>
-      {/* <ButtonUI name={'Register'}/> */}
       <div className='min-h-screen bg-gray-50'>
         {/* Navbar */}
         <nav className='bg-white shadow-sm border-b border-gray-200'>
@@ -33,7 +32,7 @@ const Home = () => {
                 Ummah jamiyatiga qo'shiling
               </p>
             </div>
-
+            {/* Navigation buttons */}
             <LoginRegisterButtons />
           </div>
         </div>
