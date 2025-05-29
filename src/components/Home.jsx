@@ -1,8 +1,14 @@
 import React from 'react';
-import ButtonUI from './ui/ButtonUI';
-import { Button, Box } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import LoginRegisterButtons from './ui/LoginRegisterButton';
 const Home = () => {
+  const navigate = useNavigate();
+  const handleSignIn = () => {
+    navigate('/signin');
+  };
+  const handleSignUp = () => {
+    navigate('/signup');
+  };
   return (
     <div>
       <div className='min-h-screen bg-gray-50'>
@@ -16,7 +22,10 @@ const Home = () => {
               </div>
 
               {/* Navigation buttons */}
-              <LoginRegisterButtons />
+              <LoginRegisterButtons
+                handleSignIn={handleSignIn}
+                handleSignUp={handleSignUp}
+              />
             </div>
           </div>
         </nav>
@@ -33,7 +42,10 @@ const Home = () => {
               </p>
             </div>
             {/* Navigation buttons */}
-            <LoginRegisterButtons />
+            <LoginRegisterButtons
+              handleSignIn={handleSignIn}
+              handleSignUp={handleSignUp}
+            />
           </div>
         </div>
       </div>
