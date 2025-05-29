@@ -23,7 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+
 # .env files Ignore all .env files
 .env
 .env.*
 .env.local
+
+
