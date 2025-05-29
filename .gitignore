@@ -23,6 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 
+<<<<<<< HEAD
+# .env files Ignore all .env files
+.env
+.env.*
+.env.local
+=======
 
 # .env files Ignore all .env files
 .env
@@ -30,3 +36,4 @@ dist-ssr
 .env.local
 
 
+>>>>>>> origin/davlat

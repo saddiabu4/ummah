@@ -1,15 +1,14 @@
-import React from 'react';
-import { Toaster } from 'sonner';
-import AppRouter from './components/routes/AppRouter';
+import React from 'react'
+
 function App() {
+
   return (
     <>
-      <AppRouter />
-
-      {/* Toasters */}
-      <Toaster richColors position='top-right' />
+      <h1 className='text-3xl text-amber-700 font-bold text-center'>Welcome to My App</h1>
+      <p className='text-amber-700 text-center'>This is a paragraph.</p>
+      
     </>
-  );
+  )
 }
 
-export default App;
+export default App
