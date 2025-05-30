@@ -1,0 +1,67 @@
+
+[
+  {
+    "flag": "🇸🇦",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/sa.webp",
+    "iso_code": "sa",
+    "utc": "+3",
+    "language_code": "ar",
+    "name": "Saudi Arabia"
+  },
+  {
+    "flag": "🇹🇷",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/tr.webp",
+    "iso_code": "tr",
+    "utc": "+3",
+    "language_code": "tr",
+    "name": "Turkey"
+  },
+  {
+    "flag": "🇮🇩",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/id.webp",
+    "iso_code": "id",
+    "utc": "+7",
+    "language_code": "id",
+    "name": "Indonesia"
+  },
+  {
+    "flag": "🇮🇷",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/ir.webp",
+    "iso_code": "ir",
+    "utc": "+3:30",
+    "language_code": "fa",
+    "name": "Iran"
+  },
+  {
+    "flag": "🇵🇰",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/pk.webp",
+    "iso_code": "pk",
+    "utc": "+5",
+    "language_code": "ur",
+    "name": "Pakistan"
+  },
+  {
+    "flag": "🇲🇾",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/my.webp",
+    "iso_code": "my",
+    "utc": "+8",
+    "language_code": "ms",
+    "name": "Malaysia"
+  },
+  {
+    "flag": "🇪🇬",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/eg.webp",
+    "iso_code": "eg",
+    "utc": "+2",
+    "language_code": "ar",
+    "name": "Egypt"
+  },
+  {
+    "flag": "🇦🇿",
+    "flag_img": "https://flagpedia.net/data/flags/w1160/az.webp",
+    "iso_code": "az",
+    "utc": "+4",
+    "language_code": "az",
+    "name": "Azerbaijan"
+  }
+]
