@@ -1,5 +1,15 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
+import {
+  Box,
+  Select,
+  MenuItem,
+  Button,
+  FormControl,
+  Typography,
+  Stack,
+  useMediaQuery,
+} from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 
 import { AppProvider } from '@toolpad/core/AppProvider';
@@ -8,7 +18,6 @@ import { PageContainer } from '@toolpad/core/PageContainer';
 
 import data from './data.json';
 
-// ----------- Theme -----------
 const demoTheme = createTheme({
   colorSchemes: { light: true, dark: true },
   cssVariables: {
@@ -25,7 +34,6 @@ const demoTheme = createTheme({
   },
 });
 
-// ----------- Navigation --------
 const NAVIGATION = [
   { kind: 'header', title: 'Main items' },
   { segment: 'home', title: 'Home' },
@@ -37,10 +45,8 @@ const NAVIGATION = [
   { segment: 'settings', title: 'Settings' },
 ];
 
-// ----------- Router -----------
 function useDemoRouter(initialPath) {
   const [pathname, setPathname] = useState(initialPath);
-
   return React.useMemo(
     () => ({
       pathname,
@@ -51,18 +57,59 @@ function useDemoRouter(initialPath) {
   );
 }
 
-// ----------- Page Component -----------
 export default function DashboardLayoutBasic(props) {
   const router = useDemoRouter('/home');
   const demoWindow = props.window ? props.window() : undefined;
   const [countries, setCountries] = useState([]);
+  const [language, setLanguage] = useState('uz');
+  const isMobile = useMediaQuery('(max-width:825px)');
 
   useEffect(() => {
     setCountries(data);
   }, []);
 
-  const renderCountryTable = () => (
-    <div className='overflow-x-auto w-full mt-4'>
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value);
+  };
+
+  const handleAddCountry = () => {
+    alert('Yangi davlat qo‘shish oynasi ochiladi.');
+  };
+
+
+
+
+  const renderPageContent = () => {
+    switch (router.pathname) {
+      case '/home':
+        return (
+          <>
+            <Stack
+              direction={isMobile ? 'column' : 'row'}
+              spacing={2}
+              alignItems={isMobile ? 'stretch' : 'center'}
+              justifyContent='space-between'
+              mb={2}
+            >
+              <Stack direction='row' spacing={2} alignItems='center'>
+                <Typography variant='body1'>Tilni tanlang:</Typography>
+                <FormControl size='small' fullWidth={isMobile}>
+                  <Select value={language} onChange={handleLanguageChange}>
+                    <MenuItem value='uz'>O'zbekcha</MenuItem>
+                    <MenuItem value='en'>English</MenuItem>
+                    <MenuItem value='ru'>Русский</MenuItem>
+                  </Select>
+                </FormControl>
+              </Stack>
+              <Button
+                variant='contained'
+                fullWidth={isMobile}
+                onClick={handleAddCountry}
+              >
+                + Respublika qo'shish
+              </Button>
+            </Stack>
+            <Box overflow='auto'>
       <table className='min-w-full text-sm text-left border-collapse border border-gray-200'>
         <thead>
           <tr className='bg-gray-100'>
@@ -107,13 +154,9 @@ export default function DashboardLayoutBasic(props) {
           ))}
         </tbody>
       </table>
-    </div>
-  );
-
-  const renderPageContent = () => {
-    switch (router.pathname) {
-      case '/home':
-        return renderCountryTable();
+    </Box>
+          </>
+        );
       default:
         return null;
     }
